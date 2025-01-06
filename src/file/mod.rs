@@ -1,5 +1,8 @@
 use std::{
-    fmt::format, fs::{DirBuilder, DirEntry, File, ReadDir}, io::{Read, Seek, Write}, os::windows::fs::FileExt, path::Path
+    fmt::format,
+    fs::{DirBuilder, DirEntry, File, ReadDir},
+    io::{Read, Seek, Write},
+    path::Path,
 };
 
 pub fn init() -> Result<(), String> {
@@ -9,12 +12,13 @@ pub fn init() -> Result<(), String> {
     for item in ["name.txt", "info.txt", "readme.md", "cv.doc"] {
         let mut file = File::create(format!("{}/{}", path.display(), item)).unwrap();
         let mut s = String::new();
+        for i in 0..12 {
+            let _ = writeln!(file, "hello\t");
+        }
     }
+
     if path.is_dir() {
         let info = path.read_dir().unwrap();
-        for file in info {
-            println!("{:?}", file.unwrap().path())
-        }
     }
 
     let file = File::create(path);

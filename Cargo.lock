@@ -551,15 +551,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "learn"
-version = "0.1.0"
-dependencies = [
- "chrono",
- "thirtyfour",
- "tokio",
-]
-
-[[package]]
 name = "libc"
 version = "0.2.169"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -697,6 +688,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "77957b295656769bb8ad2b6a6b09d897d94f05c41b069aede1fcdaa675eaea04"
 dependencies = [
  "zerocopy",
+]
+
+[[package]]
+name = "practices"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+ "thirtyfour",
+ "tokio",
 ]
 
 [[package]]
